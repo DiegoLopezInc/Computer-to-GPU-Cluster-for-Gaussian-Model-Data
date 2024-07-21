@@ -1,0 +1,24 @@
+import redis
+import json
+import time
+
+def process_batch(batch):
+    # Placeholder for batch processing logic
+    print(f"Processing batch with {len(batch)} requests.")
+    # Imagine processing here utilizing GPU resources
+    time.sleep(1)  # Simulate processing time
+
+def main():
+    r = redis.Redis(host='localhost', port=6379, db=0)
+    batch_size = 10  # Number of requests to process in a batch
+    while True:
+        batch = []
+        while len(batch) < batch_size:
+            # Block until a request is available
+            _, data_str = r.blpop('task_queue')
+            data = json.loads(data_str)
+            batch.append(data)
+        
+        process_batch(batch)
+
+    
