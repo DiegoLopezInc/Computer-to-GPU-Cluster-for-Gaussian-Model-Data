@@ -1,46 +1,37 @@
 # Computer-to-GPU Cluster for Gaussian Model Data
+This project aims to create a effcient way to stream and receive data to a GPU Cluster at my university to significantly speed up the calculation of gaussian calculations for large data sets.
 
-## Overview
-* Brief description of the project and its goals.
-* Target audience and intended use.
-
-## Cluster Setup
+## Work In Progress Notes:
+```
+1. Setup and Understanding of Computer and Cluster
 * Hardware specifications (number of nodes, GPUs per node, CPU, memory).
-* Software stack (operating system, deep learning framework, cluster management tool).
+* Software stack (operating system, cluster management tool).
 * Network configuration (topology, bandwidth).
+* Calculate theoretical optimization limit.
 
-## Data
-* Data format (CSV, Parquet, etc.) and schema.
-* Data preprocessing steps (cleaning, normalization, feature engineering).
-* Data location (local storage, distributed file system).
+2. Data Aggregation and Cleaning
+* Format (CSV, Parquet, etc.) and schema.
+* Preprocessing steps (cleaning, normalization, feature engineering).
+* Location (local storage, distributed file system).
 
-## Data Transfer
+3. Data Transfer
 * Method for transferring data to the cluster (SSH, NFS, HDFS).
-* Data partitioning and distribution strategy.
+* Partitioning and distribution strategy.
 
-## GPU Utilization
+4. GPU Utilization (Local and Cluster)
 * How GPUs are used (training, inference).
-* Deep learning framework and libraries.
 * Code structure for GPU computations.
+* Threading to improve efficiency.
+* Deep learning framework possiblities and limitations?
 
-## Code Structure
-* Overview of code organization.
-* Description of key modules and functions.
-* Dependencies and installation instructions.
-
-## Usage
-* Step-by-step instructions for users.
-* Example commands or scripts.
-
-## Troubleshooting
-* Common issues and solutions.
+5. Code Structure
+* Create a OOP of code organization.
+* Add documentation for key modules and functions.
+```
 
 ## Additional Notes
-* There are some specific considerations needed to achieve the goals of this project. Here is a visualization
+Here is a visualization of the problems I am trying to solve in this project.
 
 ![Flowchart of Project](smaAppFlowchart.jpg)
 
 The question marks represent the connections needed to send and receive data for this application. 
-
-## Contact
-* Information for contacting the project team.
